@@ -5,70 +5,55 @@
     <meta charset="UTF-8">
     <title>Chatbot Tuyển Dụng</title>
 
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1">\</script>
+
     <style>
         body {
             margin: 0;
-            background: #f5f7fa;
+            padding: 0;
             font-family: Arial, sans-serif;
+            background: #f5f5f5;
         }
 
-        .container {
-            width: 100%;
-            height: 100vh;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .chat-container {
-            width: 900px;
-            height: 850px;
-
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-
-            overflow: hidden;
-        }
-
-        .header {
-            background: #1976d2;
-            color: white;
-
-            padding: 20px;
+        .title {
             text-align: center;
-
-            font-size: 24px;
+            margin-top: 30px;
+            font-size: 32px;
             font-weight: bold;
+            color: #1976d2;
         }
 
-        iframe {
-            width: 100%;
-            height: calc(100% - 70px);
-            border: none;
+        .subtitle {
+            text-align: center;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        df-messenger {
+            --df-messenger-button-titlebar-color: #1976d2;
+            --df-messenger-chat-background-color: #ffffff;
+            --df-messenger-font-color: #000000;
+            --df-messenger-send-icon: #1976d2;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-
-        <div class="chat-container">
-
-            <div class="header">
-                Chatbot Tuyển Dụng
-            </div>
-
-            <iframe
-                allow="microphone;"
-                src="https://console.dialogflow.com/api-client/demo/embedded/aabc76c0-a304-49c9-a352-d020d7f90b27">
-            </iframe>
-
-        </div>
-
+    <div class="title">
+        CHATBOT TUYỂN DỤNG
     </div>
+
+    <div class="subtitle">
+        Hệ thống hỗ trợ tư vấn và giải đáp thông tin tuyển dụng
+    </div>
+
+    <df-messenger
+        intent="WELCOME"
+        chat-title="Chatbot Tuyển Dụng"
+        agent-id="aabc76c0-a304-49c9-a352-d020d7f90b27"
+        language-code="vi">
+    </df-messenger>
 
 </body>
 
