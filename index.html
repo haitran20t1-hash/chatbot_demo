@@ -6,30 +6,69 @@
     <title>Chatbot Tuyển Dụng</title>
 
     <style>
-        df-messenger {
-            --df-messenger-chat-window-width: 700px;
-            --df-messenger-chat-window-height: 850px;
-            --df-messenger-button-titlebar-color: #1976d2;
+        body {
+            margin: 0;
+            background: #f5f7fa;
+            font-family: Arial, sans-serif;
+        }
 
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
+        .container {
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chat-container {
+            width: 900px;
+            height: 850px;
+
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+            overflow: hidden;
+        }
+
+        .header {
+            background: #1976d2;
+            color: white;
+
+            padding: 20px;
+            text-align: center;
+
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        iframe {
+            width: 100%;
+            height: calc(100% - 70px);
+            border: none;
         }
     </style>
-
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1">\</script>
 </head>
 
 <body>
 
-    <h1>Demo Chatbot Tuyển Dụng</h1>
+    <div class="container">
 
-    <df-messenger
-        intent="WELCOME"
-        chat-title="ChatbotTuyenDung"
-        agent-id="aabc76c0-a304-49c9-a352-d020d7f90b27"
-        language-code="vi">
-    </df-messenger>
+        <div class="chat-container">
+
+            <div class="header">
+                Chatbot Tuyển Dụng
+            </div>
+
+            <iframe
+                allow="microphone;"
+                src="https://console.dialogflow.com/api-client/demo/embedded/aabc76c0-a304-49c9-a352-d020d7f90b27">
+            </iframe>
+
+        </div>
+
+    </div>
 
 </body>
 
